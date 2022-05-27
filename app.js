@@ -1,50 +1,29 @@
 // Global decelerations.
 let gridItem = document.createElement("div");
-gridItem.id = "grid-item";
+gridItem.className = "grid-item";
 // document.getElementById("grid-container").appendChild(gridItem);
 
 //  Create a function to create a div's based on a input?
 for (let i=0; i <256; i++) {
-// let gridItem = document.createElement("div");
-// gridItem.id = "grid-item";
+let gridItem = document.createElement("div");
+gridItem.className = "grid-item";
 document.getElementById("grid-container").appendChild(gridItem);
-
 }
 
 
 
-// Works as intended. 
-// const changeColor = () => {
-// document.getElementById("grid-item").style.backgroundColor = "black";
-// };
-// document.getElementById("grid-item").addEventListener("mousedown", changeColor);
 
-
-// // Works as intended.
-// const resetColor = () => {
-//     document.getElementById("grid-item").style.backgroundColor = "";
-//     };
-// // Works as intended.
-// document.getElementById("clear").addEventListener("click",resetColor);
-
-
-
-const grids = Array.from(document.getElementsByClassName('lol'));
+// Variable to create an array works w/ fxn by using forEach for event listener
+const grids = Array.from(document.getElementsByClassName('grid-item'));
 
 grids.forEach(grid => {
   grid.addEventListener("mouseover", function (event){
-      grid.setAttribute('style', 'background-color: black;');
+    grid.style.backgroundColor = "black";
   })
 });
 
-// class test. Change fxn and Event listener.
-// const changeColor = () => {
-//     grids.style.backgroundColor = "black";
-//     };
-//     grids.addEventListener("mousedown", changeColor)
 
-
-// class test. CLEAR fxn
+// Reset button works.
 const resetColor = () => {
     grids.forEach( grid => {
         grid.style.backgroundColor = "";

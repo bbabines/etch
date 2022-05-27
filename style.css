@@ -8,15 +8,10 @@ display: inline-grid;
 grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 }
 
-#grid-item {
+.grid-item {
     border: 1px solid red;
     height: 40px;
     width: 40px;
     background-color: lightblue;
 }
 
-.lol {
-    border: 1px solid red;
-    height: 40px;
-    width: 40px;
-}

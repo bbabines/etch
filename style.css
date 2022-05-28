@@ -4,14 +4,15 @@ button {
  }
 
 #grid-container {
-display: inline-grid;
+display: grid;
+/*  Need to use a fxn to change the amount of auto's needed */
 grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+height: 800px;
+width: 800px;
+
 }
 
 .grid-item {
     border: 1px solid red;
-    height: 40px;
-    width: 40px;
     background-color: lightblue;
 }
-

@@ -5,8 +5,8 @@ button {
 
 #grid-container {
 display: grid;
-/*  Need to use a fxn to change the amount of auto's needed */
-grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+grid-template-columns: repeat(16, 2fr); 
+grid-template-rows: repeat(16, 2fr);
 height: 800px;
 width: 800px;
 

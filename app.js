@@ -38,18 +38,25 @@ changeGridSize.addEventListener("click", function () {
 
     // Resets grid size
     document.getElementById("grid-container").innerHTML = "";
+
     
-    // Number of columns not correct
     // Event listener DOES NOT WORK on NEW divs
     for (let i = 0; i < numberOfDivs; i++) {
             let gridItem = document.createElement("div");
             gridItem.className = "grid-item";
-            
+
+             // Size working
+             document.getElementById("grid-container").style.setProperty("height", "800px");
+             document.getElementById("grid-container").style.setProperty("width", "800px");
+
             document.getElementById("grid-container").appendChild(gridItem);
-            // This MAY work if grid can be reset instead of adding divs
-            document.getElementById("grid-container").style.setProperty("grid-template-columns", userInput);
+
+            //Columns working
+            document.getElementById("grid-container").style.setProperty("grid-template-columns", `repeat(${userInput}, 2fr)`);
+           
+            // Rows working
+            document.getElementById("grid-container").style.setProperty("grid-template-rows", `repeat(${userInput}, 2fr)`);
             
-        
     }
 });
 
